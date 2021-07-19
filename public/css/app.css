@@ -1,0 +1,125 @@
+body {
+  height: 100%;
+  
+}
+.header{
+  background-image: url("/img/recipes-book.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Comic Sans MS;
+  height: 400px;
+}
+
+/* TopBar */
+.navbar {
+  text-decoration: none;
+}
+
+/* SideBar */
+ul {
+  list-style: none;
+}
+.sidebar {
+  background-color: tomato;
+  position: fixed;
+  height: 100%;
+  width: 200px;
+}
+.sidebar a {
+  color: white;
+  padding-bottom: 8px;
+}
+.sidebar a:hover {
+  color: rgb(48, 111, 219);
+  text-decoration: none;
+}
+.sidebar-title {
+  font-size: 25px;
+}
+.bottom-sidebar {
+  margin-top: 260px;
+  padding-left: 10px;
+  text-align: left;
+  color: white;
+}
+
+/*  Card */
+#cards {
+  float: center;
+  margin-left: 220px;
+  margin-right: 30px;
+}
+
+/* Search Bar */
+.box{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.search-title{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  color: white;
+}
+.input {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 3px solid #ffd52d;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: Comic Sans MS;
+  font-size: 20px;
+  color: #ffd52d;
+  outline: none;
+  transition: .5s;
+}
+.box:hover input{
+  width: 250px;
+  border-radius: 8px;
+}
+.box i{
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(-50%,-50%);
+  font-size: 20px;
+  color: #ffd52d;
+  transition: .2s;
+}
+.box:hover i{
+  opacity: 0;
+  z-index: -1;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar {background: red;}
+  .search-title {display: none;}
+  .search-box {padding-top: 86px;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .navbar {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .navbar {background: orange;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar {background: pink;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar {background: white;}
+}
