@@ -10,7 +10,7 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    
 
     <!-- Fonts -->
 
@@ -22,12 +22,9 @@
 </head>
 <body>
     @include('layouts.top-navbar')
-    <main>
-    
-    <div>
         @yield('content')
-    </div>
+
     
-    </main>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

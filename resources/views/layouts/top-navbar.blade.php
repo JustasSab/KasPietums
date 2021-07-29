@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-light shadow-sm">
-    <div class="container">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name') }}
         </a>
@@ -9,20 +9,34 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Receptai
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Apie Mus</a>
+                </li>
             <!-- Right Side Of Navbar -->
+            <hr>
             <ul class="navbar-nav ml-auto">
+
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Prisijungti') }}</a>
                         </li>
                     @endif
 
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registruotis') }}</a>
                         </li>
                     @endif
                 @else
@@ -40,17 +54,17 @@
                         @if (auth()->check())
                             <!-- If Admin -->
                             @if (auth()->user()->is_admin == 1)
-                            <a class="dropdown-item" href="{{ route('admin.profile') }}">{{ __('Profile') }}</a>
+                            <a class="dropdown-item" href="{{ route('admin.profile') }}">{{ __('Profilis') }}</a>
                             <!-- If User -->
                             @elseif (auth()->user()->is_admin == 0)
-                            <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profile') }}</a>
+                            <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profilis') }}</a>
                             @endif
                         @endif
                             <!-- Logout -->
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Atsijungti') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

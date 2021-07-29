@@ -13,7 +13,7 @@ class CreateIngredientsSeeder extends Seeder
      */
     public function run()
     {
-        $ingredient = [
+        $ingredients = [
             ['name' => 'Varškė'],
             ['name' => 'Kiaušinis'],
             ['name' => 'Grietinė'],
@@ -141,25 +141,9 @@ class CreateIngredientsSeeder extends Seeder
             ['name' => 'Čiobreliai'],
             ['name' => 'Džiūvėsėliai'],
             ['name' => 'Pupelės'],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-            ['name' => ''],
-
         ];
 
-        foreach ($ingredient as $key => $value) {
+        foreach ($ingredients as $key => $value) {
             User::create($value);
         }
     }
