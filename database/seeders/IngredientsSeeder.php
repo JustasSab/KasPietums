@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Ingredient;
 
-class CreateIngredientsSeeder extends Seeder
+class IngredientsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -144,7 +145,7 @@ class CreateIngredientsSeeder extends Seeder
         ];
 
         foreach ($ingredients as $key => $value) {
-            User::create($value);
+            Ingredient::create($value);
         }
     }
 }

@@ -14,14 +14,14 @@
                     Receptai
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    @foreach($categories as $category)
+                        <a class="dropdown-item" href="#">{{$category->name}}</a>
+                    @endforeach
                 </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Apie Mus</a>
-                </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Apie Mus</a>
+            </li>
             <!-- Right Side Of Navbar -->
             <hr>
             <ul class="navbar-nav ml-auto">

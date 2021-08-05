@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Recipe;
 
 class Category extends Model
 {
@@ -13,6 +14,6 @@ class Category extends Model
 
     public function categories()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsToMany(Recipe::class);
     }
 }

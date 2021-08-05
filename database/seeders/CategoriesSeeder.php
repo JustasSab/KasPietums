@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Category;
 
-class CategorySeeder extends Seeder
+class CategoriesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -34,9 +35,8 @@ class CategorySeeder extends Seeder
             ['name' => 'Alkoholiniai gėrimai'],
             ['name' => 'Gėrimai'],
         ];
-
         foreach ($categories as $key => $value) {
-            User::create($value);
+            Category::create($value);
         }
     }
 }
