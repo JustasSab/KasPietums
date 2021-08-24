@@ -10,7 +10,7 @@
 ## About Laravel
 
 ## Install and run on local
-'''
+```
 git clone {projectURL}
 composer install
 npm install && npm run dev
@@ -19,4 +19,4 @@ php artisan key:generate
 php artisan storage:link
 php artisan migrate:fresh --seed
 php artisan serve
-'''
+```
