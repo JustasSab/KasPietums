@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\{
+    HomeController,
+    AdminController,
+    UserController,
+    CategoryController,
+};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +24,12 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::group(['middleware' => 'is_admin'], function() {
-    Route::get('admin/home', 'App\Http\Controllers\HomeController@adminHome')->name('admin.home');
-    Route::get('admin/profile', 'App\Http\Controllers\AdminController@profile')->name('admin.profile');
+    Route::get('admin/home', 'HomeController@adminHome')->name('admin.home');
+    Route::get('admin/profile', 'AdminController@profile')->name('admin.profile');
 });
 
-Route::get('home', 'App\Http\Controllers\HomeController@index')->name('home');
-Route::get('profile', 'App\Http\Controllers\UserController@profile')->name('profile');
+Route::get('home', 'HomeController@index')->name('home');
+Route::get('profile', 'UserController@profile')->name('profile');
+Route::get('category/{slug}', 'CategoryController@viewCategory')->name('viewcategory');
+
+//Route::get('recipes/{recipe:name}') //Route Model Biding for recipes, URL'e rodys recepto pavadinima (slug)

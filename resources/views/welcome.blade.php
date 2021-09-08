@@ -72,8 +72,26 @@
         <div class="wrapper">
             <div class="cards_wrap">
 
+                
                 <div class="card_item">
                     <div class="card_inner">
+                    <a href="{{ url('/') }}">
+                        <div class="card_top">
+                            <img class="recipe-img" src="/img/il-vano.jpg">
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_title">
+                                Classic Pasta Primavera
+                            </div>
+                        </div>
+                    </a>  
+                    </div>
+                </div>
+                
+
+                <div class="card_item">
+                    <div class="card_inner">
+                    <a href="{{ url('/') }}">
                         <div class="card_top">
                             <img class="recipe-img" src="/img/il-vano.jpg">
                         </div>
@@ -87,6 +105,7 @@
 
                 <div class="card_item">
                     <div class="card_inner">
+                    <a href="{{ url('/') }}">
                         <div class="card_top">
                             <img class="recipe-img" src="/img/il-vano.jpg">
                         </div>
@@ -95,11 +114,13 @@
                                 Classic Pasta Primavera
                             </div>
                         </div>
+                    </a>
                     </div>
                 </div>
 
                 <div class="card_item">
                     <div class="card_inner">
+                    <a href="{{ url('/') }}">
                         <div class="card_top">
                             <img class="recipe-img" src="/img/il-vano.jpg">
                         </div>
@@ -108,19 +129,7 @@
                                 Classic Pasta Primavera
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="card_item">
-                    <div class="card_inner">
-                        <div class="card_top">
-                            <img class="recipe-img" src="/img/il-vano.jpg">
-                        </div>
-                        <div class="card_bottom">
-                            <div class="card_title">
-                                Classic Pasta Primavera
-                            </div>
-                        </div>
+                    </a>
                     </div>
                 </div>
 
@@ -137,6 +146,7 @@
 
                     <div class="card_item">
                         <div class="card_inner">
+                        <a href="{{ url('/') }}">
                             <div class="card_top">
                                 <img class="recipe-img" src="/img/il-vano.jpg">
                             </div>
@@ -145,11 +155,13 @@
                                     Classic Pasta Primavera
                                 </div>
                             </div>
+                        </a>
                         </div>
                     </div>
 
                     <div class="card_item">
                         <div class="card_inner">
+                        <a href="{{ url('/') }}">
                             <div class="card_top">
                                 <img class="recipe-img" src="/img/il-vano.jpg">
                             </div>
@@ -158,11 +170,13 @@
                                     Classic Pasta Primavera
                                 </div>
                             </div>
+                        </a>
                         </div>
                     </div>
 
                     <div class="card_item">
                         <div class="card_inner">
+                        <a href="{{ url('/') }}">
                             <div class="card_top">
                                 <img class="recipe-img" src="/img/il-vano.jpg">
                             </div>
@@ -171,11 +185,13 @@
                                     Classic Pasta Primavera
                                 </div>
                             </div>
+                        </a>
                         </div>
                     </div>
 
                     <div class="card_item">
                         <div class="card_inner">
+                        <a href="{{ url('/') }}">
                             <div class="card_top">
                                 <img class="recipe-img" src="/img/il-vano.jpg">
                             </div>
@@ -184,6 +200,7 @@
                                     Classic Pasta Primavera
                                 </div>
                             </div>
+                        </a>
                         </div>
                     </div>
 
