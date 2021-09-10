@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Recipe;
 
+/**
+ * @method static create(string[] $value)
+ */
 class Category extends Model
 {
     use HasFactory;

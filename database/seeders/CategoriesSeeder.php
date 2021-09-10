@@ -15,25 +15,82 @@ class CategoriesSeeder extends Seeder
     public function run()
     {
         $categories = [
-            ['name' => 'Apkepai'],
-            ['name' => 'Blynai'],
-            ['name' => 'Pyragai, kepiniai'],
-            ['name' => 'Desertai, saldumynai'],
-            ['name' => 'Uogienės'],
-            ['name' => 'Picos'],
-            ['name' => 'Sumuštiniai'],
-            ['name' => 'Pusryčiams'],
-            ['name' => 'Užkandžiai'],
-            ['name' => 'Konservuoti patiekalai'],
-            ['name' => 'Košės, tyrės'],
-            ['name' => 'Padažai, kremai'],
-            ['name' => 'Kepsniai'],
-            ['name' => 'Troškiniai'],
-            ['name' => 'Sriubos'],
-            ['name' => 'Salotos, mišrainės'],
-            ['name' => 'Vegetariški'],
-            ['name' => 'Alkoholiniai gėrimai'],
-            ['name' => 'Gėrimai'],
+            [
+                'name' => 'Apkepai',
+                'slug' => 'apkepai',
+            ],
+            [
+                'name' => 'Blynai',
+                'slug' => 'blynai',
+            ],
+            [
+                'name' => 'Pyragai, kepiniai',
+                'slug' => 'pyragai kepiniai',
+            ],
+            [
+                'name' => 'Desertai, saldumynai',
+                'slug' => 'desertai saldumynai',
+            ],
+            [
+                'name' => 'Uogienės',
+                'slug' => 'uogienės',
+            ],
+            [
+                'name' => 'Picos',
+                'slug' => 'uogienės',
+            ],
+            [
+                'name' => 'Sumuštiniai',
+                'slug' => 'uogienės',
+            ],
+            [
+                'name' => 'Pusryčiams',
+                'slug' => 'uogienės',
+            ],
+            [
+                'name' => 'Užkandžiai',
+                'slug' => 'uogienės',
+            ],
+            [
+                'name' => 'Konservuoti patiekalai',
+                'slug' => 'konservuoti patiekalai',
+            ],
+            [
+                'name' => 'Košės, tyrės',
+                'slug' => 'košės tyrės',
+            ],
+            [
+                'name' => 'Padažai, kremai',
+                'slug' => 'padažai kremai',
+            ],
+            [
+                'name' => 'Kepsniai',
+                'slug' => 'kepsniai',
+            ],
+            [
+                'name' => 'Troškiniai',
+                'slug' => 'troškiniai',
+            ],
+            [
+                'name' => 'Sriubos',
+                'slug' => 'sriubos',
+            ],
+            [
+                'name' => 'Salotos, mišrainės',
+                'slug' => 'salotos mišrainės',
+            ],
+            [
+                'name' => 'Vegetariški',
+                'slug' => 'vegetariški',
+            ],
+            [
+                'name' => 'Alkoholiniai gėrimai',
+                'slug' => 'alkoholiniai gėrimai',
+            ],
+            [
+                'name' => 'Gėrimai',
+                'slug' => 'gėrimai',
+            ],
         ];
         foreach ($categories as $key => $value) {
             Category::create($value);

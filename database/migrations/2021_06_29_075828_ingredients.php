@@ -30,4 +30,3 @@ class Ingredients extends Migration
         //
     }
 }
- 
