@@ -1,4 +1,4 @@
-<div class="leftbar shadow-sm float-left navbar-light">    
+<div class="leftbar shadow-sm float-left navbar-light">
     <!-- Start Sidebar -->
     <div class="sidebar">
         <!-- Start Navigationbar -->
@@ -20,11 +20,11 @@
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Grids</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Images</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Media</a></li>
-                    <li><a href="#" class="fa fa-user" style="font-size:20px"> Modals</a></li>                                
+                    <li><a href="#" class="fa fa-user" style="font-size:20px"> Modals</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Paginations</a></li>
-                    <li><a href="#" class="fa fa-user" style="font-size:20px"> Popovers</a></li>                                
+                    <li><a href="#" class="fa fa-user" style="font-size:20px"> Popovers</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Progress Bars</a></li>
-                    <li><a href="#" class="fa fa-user" style="font-size:20px"> Tabs</a></li>    
+                    <li><a href="#" class="fa fa-user" style="font-size:20px"> Tabs</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Tooltips</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Typography</a></li>
                 </li>

@@ -1,0 +1,77 @@
+body {
+    font-family: Comic Sans MS;
+}
+/*================ TopBar ================*/
+.navbar {
+    position: fixed;
+    color: white;
+    top: 0;
+    width: 100%;
+    z-index:1;
+}
+.navbar a{
+    color: inherit;
+}
+.navbar a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffd52d;
+}
+.navbar-brand{
+    text-align: left;
+    margin-right: 50px;
+}
+.navbar-nav{
+    margin-right: 30px;
+}
+
+/*================ Left SideBar ================*/
+ul, li {
+    list-style: none;
+}
+.sidebar {
+    background-color: tomato;
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    margin-top: 56px;
+}
+.sidebar a {
+    color: white;
+    padding-bottom: 8px;
+}
+.sidebar a:hover {
+    color: rgb(48, 111, 219);
+    text-decoration: none;
+}
+.sidebar-title {
+    font-size: 25px;
+}
+.bottom-sidebar {
+    margin-top: 260px;
+    padding-left: 10px;
+    text-align: left;
+    color: white;
+}
+
+.openbtn{
+    margin-top: 60px;
+    margin-left: -50px;
+}
+
+
+/*================ Right SideBar ================*/
+.xp-vertical {
+    background-color: white;
+    height: auto;
+}
+.xp-rightbar {
+    padding-left: 250px;
+    margin-right: 50px;
+    overflow: hidden;
+    min-height: 500px;
+    transition: all 0.3s ease;
+}
+.xp-contentbar {
+    padding: 30px;
+    margin-top: 60px;
+}

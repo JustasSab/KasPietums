@@ -15,26 +15,24 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/admincss.css') }}" rel="stylesheet">
     </head>
 
-    <body>
-
-        <body class="xp-vertical">
+    <body class="xp-vertical">
         <div id="app">
         @include('layouts.top-navbar')
 
             <!-- Start XP Container -->
             <div id="xp-container">
                 <!-- Start XP Leftbar -->
-            @include('layouts.left-sidebar')
-            <!-- End XP Leftbar -->
+                @include('layouts.left-sidebar')
+                <!-- End XP Leftbar -->
                 <!-- Start XP Rightbar -->
-            @include('layouts.right-sidebar')
-            @yield('admin-rightbar-content')
-            <!-- End XP Rightbar -->
+                @yield('admin-rightbar-content')
+                <!-- End XP Rightbar -->
             </div>
         </div>
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/collapsedbar.js') }}" defer></script>
     </body>
 </html>

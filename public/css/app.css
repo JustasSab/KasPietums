@@ -20,6 +20,9 @@ body {
   width: 100%;
   z-index:1;
 }
+ul, li {
+    list-style: none;
+}
 .navbar a{
   color: inherit;
 }
@@ -166,34 +169,6 @@ body {
 
 /*================ App ================*/
 
-/*================ SideBar ================*/
-ul, li {
-  list-style: none;
-}
-.sidebar {
-  background-color: tomato;
-  position: fixed;
-  height: 100%;
-  width: 200px;
-  margin-top: 56px;
-}
-.sidebar a {
-  color: white;
-  padding-bottom: 8px;
-}
-.sidebar a:hover {
-  color: rgb(48, 111, 219);
-  text-decoration: none;
-}
-.sidebar-title {
-  font-size: 25px;
-}
-.bottom-sidebar {
-  margin-top: 260px;
-  padding-left: 10px;
-  text-align: left;
-  color: white;
-}
 /*================ Footer ================*/
 #footer{
   font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
