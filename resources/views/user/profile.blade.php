@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+@extends('layouts.main ')
+@section('rightbar-content')
 <div class="container py-4">
     <div class="row justify-content-center" id="profileform">
         <div class="col-md-8">

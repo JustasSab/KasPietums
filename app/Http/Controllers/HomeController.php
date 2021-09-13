@@ -1,10 +1,10 @@
 <?php
-   
+
 namespace App\Http\Controllers;
-  
+
 use Illuminate\Http\Request;
 use App\Models\User;
-   
+
 class HomeController extends Controller
 {
     /**
@@ -16,7 +16,7 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-  
+
     /**
      * Show the application dashboard.
      *
@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         return view('user/home');
     }
-  
+
     /**
      * Show the application dashboard.
      *
@@ -36,5 +36,5 @@ class HomeController extends Controller
     {
         return view('admin/home');
     }
-    
+
 }

@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@section('title')
+    KasPietums
+@endsection
+
+@extends('layouts.main')
 
 @section('content')
 <div class="container py-4">

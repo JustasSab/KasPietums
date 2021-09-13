@@ -1,7 +1,11 @@
-@extends('layouts.app')
+@section('title')
+    KasPietums - Register
+@endsection
 
-@section('content')
+@extends('layouts.main')
+@section('rightbar-content')
 <body class="loginform">
+
 <div class="login-box">
     <h2>Registracija</h2>
     <form method="POST" action="{{ route('register') }}">

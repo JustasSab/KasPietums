@@ -1,6 +1,9 @@
-@extends('layouts.app')
+@section('title')
+    KasPietums
+@endsection
 
-@section('content')
+@extends('layouts.main')
+@section('rightbar-content')
 <body class="loginform">
 <div class="login-box">
     <h2>Slaptažodžio patvirtinimas</h2>

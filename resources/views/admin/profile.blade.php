@@ -1,6 +1,5 @@
 @extends('layouts.app')
-@section('content')
-@include('layouts.admin-sidebar')
+@section('admin-rightbar-content')
 <div class="container py-4">
     <div class="row justify-content-center" id="profileform">
         <div class="col-md-8">
@@ -9,7 +8,7 @@
                     <div class="card-body">
                         <form>
                         @csrf
-                    
+
                         <div class="mt-3">
                             <label class="block font-medium text-sm text-gray-700" for="name">
                                 Vardas

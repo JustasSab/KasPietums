@@ -22,14 +22,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 Route::group(['middleware' => 'is_admin'], function() {
-    Route::get('admin/home', 'HomeController@adminHome')->name('admin.home');
-    Route::get('admin/profile', 'AdminController@profile')->name('admin.profile');
+    Route::get('/admin/home', 'HomeController@adminHome')->name('admin.home');
+    Route::get('/admin/profile', 'AdminController@profile')->name('admin.profile');
 });
 
-Route::get('home', 'HomeController@index')->name('home');
-Route::get('profile', 'UserController@profile')->name('profile');
-Route::get('category/{slug}', 'CategoryController@viewCategory')->name('viewcategory');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'UserController@profile')->name('profile');
+Route::get('/category/{slug}', 'CategoryController@show')->name('showcategory');
 
-//Route::get('recipes/{recipe:name}') //Route Model Biding for recipes, URL'e rodys recepto pavadinima (slug)

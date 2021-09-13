@@ -1,6 +1,10 @@
-@extends('layouts.app')
+@section('title')
+    Booster - Login
+@endsection
+@extends('layouts.main_auth')
+@section('style')
 
-@section('content')
+@endsection
 <div class="container py-4">
     <div class="row justify-content-center" id="loginform">
         <div class="col-md-8">
@@ -70,4 +74,5 @@
         </div>
     </div>
 </div>
+@section('script')
 @endsection

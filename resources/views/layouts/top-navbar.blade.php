@@ -15,7 +15,12 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @foreach($categories as $category)
-                        <a class="dropdown-item" href="{{ url('/category/'.$category->id) }}">{{$category->name}}</a>
+
+                        <a class="dropdown-item" href="{{$category->slug}}">{{$category->name}}</a>
+
+                    {{--
+                        <a class="dropdown-item" href="{{ route('home') }}">{{$category->name}}</a>
+                    --}}
                     @endforeach
                 </div>
             </li>
@@ -23,9 +28,7 @@
                 <a class="nav-link" href="#">Apie Mus</a>
             </li>
             <!-- Right Side Of Navbar -->
-            <hr>
             <ul class="navbar-nav ml-auto">
-
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
@@ -41,37 +44,50 @@
                     @endif
                 @else
                 <!-- Authenticated user -->
-                <div class="shopping-cart-icon py-2">
-                    <i class="fa fa-shopping-basket"></i>
-                </div>
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
-                        </a>
+                @if (auth()->check())
+                <!-- If Admin -->
+                    @if (auth()->user()->is_admin == 0)
+                        <div class="shopping-cart-icon py-2">
+                            <i class="fa fa-shopping-basket"></i>
+                        </div>
+                    @endif
+                @endif
 
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <!-- Dashboard -->
+                        @if (auth()->check())
+                            <!-- If Admin -->
+                                @if (auth()->user()->is_admin == 1)
+                                    <a class="dropdown-item" href="{{ route('admin.home') }}">{{ __('Dashboard') }}</a>
+                            @endif
+                        @endif
                         <!-- Profile -->
                         @if (auth()->check())
                             <!-- If Admin -->
                             @if (auth()->user()->is_admin == 1)
-                            <a class="dropdown-item" href="{{ route('admin.profile') }}">{{ __('Profilis') }}</a>
+                                <a class="dropdown-item" href="{{ route('admin.profile') }}">{{ __('Profilis') }}</a>
                             <!-- If User -->
                             @elseif (auth()->user()->is_admin == 0)
-                            <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profilis') }}</a>
+                                <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profilis') }}</a>
                             @endif
                         @endif
-                            <!-- Logout -->
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                                {{ __('Atsijungti') }}
-                            </a>
+                        <!-- Logout -->
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            {{ __('Atsijungti') }}
+                        </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
                 @endguest
             </ul>
         </div>

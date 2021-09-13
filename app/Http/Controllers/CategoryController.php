@@ -7,9 +7,9 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function viewCategory($slug)
+    public function show($slug)
     {
         $category = Category::FindOrFail($slug);
-        return view('viewcategory', compact('category'));
+        return view('showcategory', compact('category'));
     }
 }

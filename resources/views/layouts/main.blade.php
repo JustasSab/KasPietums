@@ -7,7 +7,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'KasPietums') }}</title>
+        <title> @yield('title') </title>
 
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -17,24 +17,22 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-
     <body>
-
-        <body class="xp-vertical">
-        <div id="app">
-        @include('layouts.top-navbar')
-
-            <!-- Start XP Container -->
-            <div id="xp-container">
+        <!-- Start XP Container -->
+        <div>
                 <!-- Start XP Leftbar -->
-            @include('layouts.left-sidebar')
+            @include('layouts.top-navbar')
             <!-- End XP Leftbar -->
                 <!-- Start XP Rightbar -->
-            @include('layouts.right-sidebar')
-            @yield('admin-rightbar-content')
+            @yield('rightbar-content')
             <!-- End XP Rightbar -->
-            </div>
         </div>
+    <!-- End XP Container -->
+
+        <!-- Start JS -->
+        <script src="{{ asset('js/fadesearchbox.js') }}"></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- End JS -->
+
     </body>
 </html>

@@ -205,7 +205,7 @@ ul, li {
 
 /*================ Login, Registration, Password reset/confirm Forms ================*/
 body.loginform {
-  font-family: sans-serif;
+  font-family: Comic Sans MS;
   background-image: url("/img/recipes-book.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -213,6 +213,7 @@ body.loginform {
   background-attachment: fixed;
 }
 .login-box {
+  font-family: sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -365,6 +366,7 @@ padding-left: 5px;
   }
 }
 
+
 /*================ Extra small devices (phones, 600px and down) ================*/
 @media only screen and (max-width: 600px) {
   .search-title {display: none;}
@@ -377,11 +379,11 @@ padding-left: 5px;
 
 /*================ Medium devices (landscape tablets, 768px and up) ================*/
 @media only screen and (min-width: 768px) {
-} 
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-} 
+}
 
 /*================ Extra large devices (large laptops and desktops, 1200px and up) ================*/
 @media only screen and (min-width: 1200px) {

@@ -25,11 +25,11 @@ class CategoriesSeeder extends Seeder
             ],
             [
                 'name' => 'Pyragai, kepiniai',
-                'slug' => 'pyragai kepiniai',
+                'slug' => 'pyragai-kepiniai',
             ],
             [
                 'name' => 'Desertai, saldumynai',
-                'slug' => 'desertai saldumynai',
+                'slug' => 'desertai-saldumynai',
             ],
             [
                 'name' => 'Uogienės',
@@ -37,31 +37,31 @@ class CategoriesSeeder extends Seeder
             ],
             [
                 'name' => 'Picos',
-                'slug' => 'uogienės',
+                'slug' => 'picos',
             ],
             [
                 'name' => 'Sumuštiniai',
-                'slug' => 'uogienės',
+                'slug' => 'sumuštiniai',
             ],
             [
                 'name' => 'Pusryčiams',
-                'slug' => 'uogienės',
+                'slug' => 'pusryčiams',
             ],
             [
                 'name' => 'Užkandžiai',
-                'slug' => 'uogienės',
+                'slug' => 'užkandžiai',
             ],
             [
                 'name' => 'Konservuoti patiekalai',
-                'slug' => 'konservuoti patiekalai',
+                'slug' => 'konservuoti-patiekalai',
             ],
             [
                 'name' => 'Košės, tyrės',
-                'slug' => 'košės tyrės',
+                'slug' => 'košės-tyrės',
             ],
             [
                 'name' => 'Padažai, kremai',
-                'slug' => 'padažai kremai',
+                'slug' => 'padažai-kremai',
             ],
             [
                 'name' => 'Kepsniai',
@@ -77,7 +77,7 @@ class CategoriesSeeder extends Seeder
             ],
             [
                 'name' => 'Salotos, mišrainės',
-                'slug' => 'salotos mišrainės',
+                'slug' => 'salotos-mišrainės',
             ],
             [
                 'name' => 'Vegetariški',
@@ -85,7 +85,7 @@ class CategoriesSeeder extends Seeder
             ],
             [
                 'name' => 'Alkoholiniai gėrimai',
-                'slug' => 'alkoholiniai gėrimai',
+                'slug' => 'alkoholiniai-gėrimai',
             ],
             [
                 'name' => 'Gėrimai',
