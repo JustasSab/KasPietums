@@ -9,8 +9,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li><br>
-                <li>
-                    <li><a href="#" class="fa fa-book" style="font-size:20px"> Receptai</a></li>
+                    <li><a href="{{ route('recipes.show') }}" class="fa fa-book" style="font-size:20px"> Receptai</a></li>
                     <li><a href="#" class="fa fa-cutlery" style="font-size:20px"> Ingredientai</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Vartotojai</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Cards</a></li>
@@ -27,7 +26,6 @@
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Tabs</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Tooltips</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Typography</a></li>
-                </li>
             </ul>
         </div>
         <!-- End XP Navigationbar -->
@@ -37,3 +35,4 @@
     </div>
     <!-- End XP Sidebar -->
 </div>
+<script src="{{ asset('js/collapsedbar.js') }}" defer></script>

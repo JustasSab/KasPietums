@@ -8,7 +8,7 @@ use App\Models\User;
 class AdminController extends Controller
 {
     public function profile()
-    {        
+    {
         return view('admin/profile');
     }
 }

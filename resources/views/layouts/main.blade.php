@@ -18,10 +18,10 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
+    @include('layouts.top-navbar')
         <!-- Start XP Container -->
         <div>
-                <!-- Start XP Leftbar -->
-            @include('layouts.top-navbar')
+        <!-- Start XP Leftbar -->
             <!-- End XP Leftbar -->
                 <!-- Start XP Rightbar -->
             @yield('rightbar-content')

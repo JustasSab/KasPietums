@@ -29,11 +29,19 @@ ul, li {
     list-style: none;
 }
 .sidebar {
-    background-color: tomato;
+    height: 100%;
+    width: 200px;
+    margin-top: 56px;
+}
+
+.sidebar {
     position: fixed;
     height: 100%;
     width: 200px;
     margin-top: 56px;
+    z-index: 999;
+    background-color: tomato;
+    transition: all 0.3s;
 }
 .sidebar a {
     color: white;

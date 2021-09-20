@@ -6,6 +6,7 @@ use App\Http\Controllers\{
     AdminController,
     UserController,
     CategoryController,
+    RecipeController,
 };
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +23,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
 Route::group(['middleware' => 'is_admin'], function() {
-    Route::get('/admin/home', 'HomeController@adminHome')->name('admin.home');
-    Route::get('/admin/profile', 'AdminController@profile')->name('admin.profile');
+    Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+    Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
+    Route::get('/admin/recipes', [RecipeController::class, 'show'])->name('recipes.show');
+    Route::get('/admin/recipes/create', [RecipeController::class, 'create'])->name('recipes.create');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/profile', 'UserController@profile')->name('profile');
-Route::get('/category/{slug}', 'CategoryController@show')->name('showcategory');
-
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('showcategory');
