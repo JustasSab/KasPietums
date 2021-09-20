@@ -9,7 +9,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li><br>
-                    <li><a href="{{ route('recipes.show') }}" class="fa fa-book" style="font-size:20px"> Receptai</a></li>
+                    <li><a href="{{ route('recipes.index') }}" class="fa fa-book" style="font-size:20px"> Receptai</a></li>
                     <li><a href="#" class="fa fa-cutlery" style="font-size:20px"> Ingredientai</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Vartotojai</a></li>
                     <li><a href="#" class="fa fa-user" style="font-size:20px"> Cards</a></li>

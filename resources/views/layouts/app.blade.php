@@ -28,7 +28,9 @@
                 @include('layouts.left-sidebar')
                 <!-- End XP Leftbar -->
                 <!-- Start XP Rightbar -->
-                @yield('admin-rightbar-content')
+                <div class="right-content">
+                    @yield('admin-rightbar-content')
+                </div>
                 <!-- End XP Rightbar -->
             </div>
         </div>

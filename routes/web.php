@@ -28,8 +28,7 @@ Auth::routes();
 Route::group(['middleware' => 'is_admin'], function() {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
     Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
-    Route::get('/admin/recipes', [RecipeController::class, 'show'])->name('recipes.show');
-    Route::get('/admin/recipes/create', [RecipeController::class, 'create'])->name('recipes.create');
+    Route::resource('/admin/recipes',RecipeController::class);
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

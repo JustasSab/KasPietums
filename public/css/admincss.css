@@ -73,13 +73,24 @@ ul, li {
     height: auto;
 }
 .xp-rightbar {
-    padding-left: 250px;
-    margin-right: 50px;
     overflow: hidden;
     min-height: 500px;
+    margin-top: -80px;
     transition: all 0.3s ease;
 }
 .xp-contentbar {
     padding: 30px;
     margin-top: 60px;
 }
+
+
+.content {
+    margin-left: 240px;
+}
+
+.right-content{
+    padding-top: 100px;
+    padding-left: 240px;
+    font-family: sans-serif;
+}
+
