@@ -9,8 +9,17 @@ use App\Models\Category;
 class Recipe extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'recipes';
+
+    protected $fillable = [
+        'name',
+        'slug',
+        'image',
+        'ingredients',
+        'description',
+        'preparation',
+    ];
 
     public function categories()
     {

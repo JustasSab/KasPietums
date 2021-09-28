@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Recipe;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class RecipeController extends Controller
 {
@@ -35,11 +37,27 @@ class RecipeController extends Controller
             'description' => 'required',
             'preparation' => 'required',
         ]);
+        $recipes = new Recipe;
 
-        Recipe::create($request->all());
+        $recipes->name = $request->name;
+        $recipes->slug = $request->slug;
+        $recipes->ingredients = $request->ingredients;
+        $recipes->description = $request->description;
+        $recipes->preparation = $request->preparation;
+
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extention;
+            $file->move('public/recipes/', $filename);
+            $recipes->image = $filename;
+        }
+
+        $recipes->save();
 
         return redirect()->route('recipes.index')
-            ->with('success','Recipe created successfully.');
+            ->with('success','Recipe has been created!');
     }
 
     /**
@@ -61,7 +79,7 @@ class RecipeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Recipe $recipe)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'name' => 'required',
@@ -71,20 +89,42 @@ class RecipeController extends Controller
             'preparation' => 'required',
         ]);
 
-        $recipe->update($request->all());
+        $recipes = Recipe::find($id);
+
+        $recipes->name = $request->name;
+        $recipes->slug = $request->slug;
+        $recipes->ingredients = $request->ingredients;
+        $recipes->description = $request->description;
+        $recipes->preparation = $request->preparation;
+
+        if (request()->hasFile('image')) {
+            $destination = 'public/recipes/'.$recipes->image;
+            if(File::exists($destination))
+            {
+                File::delete($destination);
+            }
+            $file = $request->file('image');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extention;
+            $file->move('public/recipes/', $filename);
+            $recipes->image = $filename;
+        }
+
+        $recipes->save();
 
         return redirect()->route('recipes.index')
-            ->with('success','Recipe updated successfully');
+            ->with('success','Recipe updated!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Recipe $recipe)
+    public function destroy($id)
     {
-        $recipe->delete();
+        $recipes = Recipe::find($id);
+        $recipes->delete();
 
         return redirect()->route('recipes.index')
-            ->with('success','Recipe deleted successfully');
+            ->with('success','Recipe deleted!');
     }
 }

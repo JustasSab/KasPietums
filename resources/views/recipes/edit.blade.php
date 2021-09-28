@@ -20,39 +20,49 @@
         </div>
     @endif
 
-    <form action="{{ route('recipes.update',$recipe->id) }}" method="POST">
-        @csrf
+    <form action="{{ route('recipes.update',$recipe) }}" method="POST" enctype="multipart/form-data">
         @method('PUT')
+        @csrf
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $recipe->name }}" class="form-control">
+                    <label for="name_field">Name</label>
+                    <input type="text" name="name" class="form-control" id="name_field" value="{{ $recipe->name }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Slug:</strong>
-                    <input type="text" name="price" value="{{ $recipe->slug }}" class="form-control">
+                    <label for="slug_field">Slug</label>
+                    <input type="text" name="slug" class="form-control" id="slug_field" value="{{ $recipe->slug }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Ingredients:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail">{{ $recipe->ingredients }}</textarea>
+                    <label for="image_field">Image</label>
+                    <input type="file" name="image" class="form-control-file" id="image_field">
+                    <img src="{{ asset('public/recipes/'.$recipe->image) }}" width="70px" height="70px" alt="">
+                    {{--
+                                        <img src="{{ Storage::url($recipe->image) }}" height="200" width="200" alt="" />
+                    --}}
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Description:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail">{{ $recipe->description }}</textarea>
+                    <label for="ingredients_field">Ingredients</label>
+                    <textarea type="text" class="form-control" name="ingredients" id="ingredients_field">{{ $recipe->ingredients }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Preparation:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail">{{ $recipe->preparation }}</textarea>
+                    <label for="description_field">Description</label>
+                    <textarea type="text" class="form-control" name="description" id="description_field">{{ $recipe->description }}</textarea>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <label for="preparation_field">Preparation</label>
+                    <textarea type="text" class="form-control" name="preparation" id="preparation_field">{{ $recipe->preparation }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

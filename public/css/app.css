@@ -1,6 +1,6 @@
 body {
     height: 100%;
-    font-family: Comic Sans MS;
+    font-family: Comic Sans MS, serif;
 }
 .header{
     background-image: url("/img/recipes-book.jpg");
@@ -125,7 +125,6 @@ ul, li {
 .cards_wrap .card_top {
     width: 100%;
     min-height: 225px;
-
     padding-bottom: 0;
 }
 .cards_wrap .card_bottom{
@@ -145,7 +144,7 @@ ul, li {
     font-size: 18px;
     margin-bottom: 5px;
 }
-.cards_wrap .card_bottom .card_creator{
+.cards_wrap .card_bottom{
     text-align: center;
 }
 @media (max-width: 1024px) {
@@ -180,7 +179,7 @@ ul, li {
 
 /*================ Login, Registration, Password reset/confirm Forms ================*/
 body.loginform {
-    font-family: Comic Sans MS;
+    font-family: Comic Sans MS, serif;
     background-image: url("/img/recipes-book.jpg");
     background-position: center;
     background-repeat: no-repeat;

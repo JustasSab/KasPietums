@@ -15,11 +15,12 @@ class Recipes extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug');
-            $table->text('ingredients');
-            $table->text('description');
-            $table->text('preparation'); //paruošimas
+            $table->string('name')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('image')->nullable();//will contain url to image
+            $table->text('ingredients')->nullable();
+            $table->text('description')->nullable();
+            $table->text('preparation')->nullable(); //paruošimas
             $table->timestamps();
         });
     }
