@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('admin-rightbar-content')
-    <button class="openbtn" onclick="openNav()">☰</button>
+    <button class="openbtn hidden" id="openbtn" onclick="openNav()">☰</button>
     <div class="recipes-form">
     <div class="">
         <div class="pull-left">
