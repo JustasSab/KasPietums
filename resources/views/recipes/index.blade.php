@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('admin-rightbar-content')
-
-<div class="recipes-form">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <div class="recipes-form">
     <div class="">
         <div class="pull-left">
             <h3>Receptai</h3>
@@ -9,13 +9,16 @@
         <div class="pull-left">
             <a class="btn btn-success" href="{{ route('recipes.create') }}">Pridėti Receptą</a>
         </div>
+        <div class="pull-right mr-4">
+            <input type="text" placeholder="Search..">
+        </div>
     </div>
 </div>
 
 <!--image card layout start-->
 <div class="container-content">
     <!--image row start-->
-    <div class="row">
+    <div class="row-recipes">
         <!--image card start-->
         @foreach ($recipes as $recipe)
             <div class="image">

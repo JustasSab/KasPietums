@@ -18,21 +18,22 @@
         <link href="{{ asset('css/admincss.css') }}" rel="stylesheet">
     </head>
 
-    <body class="xp-vertical">
+    <body>
         <div id="app">
-        @include('layouts.top-navbar')
-
-            <!-- Start XP Container -->
-            <div id="xp-container">
-                <!-- Start XP Leftbar -->
-                @include('layouts.left-sidebar')
-                <!-- End XP Leftbar -->
-                <!-- Start XP Rightbar -->
-                <div class="right-content">
-                    @yield('admin-rightbar-content')
-                </div>
-                <!-- End XP Rightbar -->
+            <div id="header">
+                @include('layouts.top-navbar')
             </div>
+            <!-- Start XP Container -->
+                <!-- Start XP Leftbar -->
+            <div id="mySidebar" class="sidebar">
+                @include('layouts.left-sidebar')
+            </div>
+            <!-- End XP Leftbar -->
+            <!-- Start XP Rightbar -->
+            <div id="right-content">
+                @yield('admin-rightbar-content')
+            </div>
+            <!-- End XP Rightbar -->
         </div>
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script src="{{ asset('js/collapsedbar.js') }}" defer></script>

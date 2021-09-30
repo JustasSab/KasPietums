@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('admin-rightbar-content')
-    <div class="xp-rightbar">
         <div class="row xp-contentbar">
             <!-- End XP Col -->
             <div class="user-card col-md-6 col-lg-6 col-xl-6" id="user-card">
@@ -43,5 +42,5 @@
             <!-- End XP Col -->
             <!-- Next content -->
         </div>
-    </div>
+
 @endsection

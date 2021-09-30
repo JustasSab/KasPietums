@@ -1,5 +1,12 @@
 body {
     font-family: Comic Sans MS, serif;
+    background-color: rgba(49,248,111,0.04) ;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 /*================ TopBar ================*/
 .navbar {
@@ -7,10 +14,13 @@ body {
     color: white;
     top: 0;
     width: 100%;
-    z-index:1;
+    z-index:2;
+    padding-left: 20px;
 }
-.navbar a{
+.navbar a, ul, li{
     color: inherit;
+    list-style: none;
+    padding-left: 10px;
 }
 .navbar a:hover {
     text-decoration: underline;
@@ -25,66 +35,84 @@ body {
 }
 
 /*================ Left SideBar ================*/
-ul, li {
-    list-style: none;
-}
-.sidebar {
-    height: 100%;
-    width: 200px;
-    margin-top: 56px;
-}
 
 .sidebar {
-    position: fixed;
     height: 100%;
     width: 200px;
-    margin-top: 56px;
-    z-index: 999;
-    background-color: tomato;
-    transition: all 0.3s;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color: #343a40;
+    overflow-x: hidden;
+    transition: all 0.5s;
 }
 .sidebar a {
     color: white;
-    padding-bottom: 8px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+    font-size: 20px;
 }
 .sidebar a:hover {
     color: rgb(48, 111, 219);
-    text-decoration: none;
 }
-.sidebar-title {
+.sidebar .closebtn {
+    position: absolute;
+    right: 10px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+.openbtn {
+    margin-top: 5px;
+    margin-left: 2px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+.openbtn:hover {
+     background-color: #444;
+ }
+.sidebar-title{
+    margin-top: 40px;
+}
+.sidebar-title span{
     font-size: 25px;
 }
 .bottom-sidebar {
-    margin-top: 260px;
+    margin-top: 20px;
     padding-left: 10px;
     text-align: left;
     color: white;
 }
 
 /*================ Right SideBar ================*/
-.xp-vertical {
+/*.xp-vertical {
     background-color: white;
     height: auto;
 }
 .xp-rightbar {
     overflow: hidden;
     min-height: 500px;
-    margin-top: -80px;
+   !* margin-top: -80px;*!
     transition: all 0.3s ease;
-}
+}*/
 .xp-contentbar {
     padding: 30px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
-.content {
+/*.content {
     margin-left: 240px;
-}
-.right-content{
-    height: 100%;
-    background-color: rgba(49,248,111,0.04) ;
+}*/
+#right-content{
     padding-top: 55px;
     padding-left: 201px;
     font-family: sans-serif;
+    transition: margin-left .5s;
 }
 
 
@@ -94,19 +122,18 @@ ul, li {
 .recipes-form {
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 50px;
     position: relative;
 }
 .container-content{
     width: 100%;
-    margin: 40px;
 }
-.row{
+.row-recipes{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 .image{
-
     background: #50A7FF;
     position: relative;
     display: inline-block;
