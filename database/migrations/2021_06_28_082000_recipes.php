@@ -15,13 +15,18 @@ class Recipes extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
+/*            $table->unsignedBigInteger('category_id');*/
             $table->string('name')->nullable();
             $table->string('slug')->nullable();
             $table->string('image')->nullable();//will contain url to image
             $table->text('ingredients')->nullable();
             $table->text('description')->nullable();
-            $table->text('preparation')->nullable(); //paruošimas
+            $table->text('preparation')->nullable();
             $table->timestamps();
+/*            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')
+                ->onDelete('cascade');*/
         });
     }
 

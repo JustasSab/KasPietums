@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('admin-rightbar-content')
+    <button class="openbtn hidden" id="openbtn" onclick="openNav()">☰</button>
 <div class="container py-4">
     <div class="row justify-content-center" id="profileform">
         <div class="col-md-8">

@@ -26,6 +26,6 @@ class RecipesSeeder extends Seeder
         ])->categories()->attach(1);
 
         $recipes = Recipe::find(1);
-        $recipes->categories()->attach(3);
+        $recipes->categories()->attach(3); //prieskiriama kitai kategorijai
     }
 }

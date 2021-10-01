@@ -49,7 +49,7 @@
                         <div class="xp-widget-box">
                             <div class="float-left">
                                 <h4 class="xp-counter text-success"><span>{{DB::table('categories')->count()}}</span></h4>
-                                <p class="mb-0 text-muted">Receptų</p>
+                                <p class="mb-0 text-muted">Kategorijų</p>
                             </div>
                             <div class="float-right">
                                 <div class="xp-widget-icon xp-widget-icon-bg bg-success-rgba">
