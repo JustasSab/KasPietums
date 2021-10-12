@@ -61,6 +61,7 @@
                 </div>
             </div>
             <!-- End XP Col -->
+
         </div>
 
 @endsection

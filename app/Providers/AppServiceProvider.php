@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,7 +25,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-/*        $categories=DB::table('categories')->get();
-        View::share('categories',$categories);*/
+        $categories = Category::all();
+        View::share('categories', $categories);
+
+        // $categories=DB::table('categories')->get();
+        // View::share('categories',$categories);
     }
 }

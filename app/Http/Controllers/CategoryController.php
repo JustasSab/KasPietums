@@ -7,9 +7,9 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function show($slug)
+    public function index()
     {
-        $category = Category::FindOrFail($slug);
-        return view('showcategory', compact('category'));
+        $category = Category::all();
+        return view('layouts.top-navbar', compact('category'));
     }
 }

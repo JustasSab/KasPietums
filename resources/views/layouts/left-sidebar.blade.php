@@ -17,5 +17,6 @@
 <div class="bottom-sidebar">
     <p>Author:<br>Justas Sabaliūnas</p>
 </div>
+
 <!-- End XP Sidebar -->
 {{--<script src="{{ asset('js/collapsedbar.js') }}" defer></script>--}}

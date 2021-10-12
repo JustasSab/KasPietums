@@ -14,14 +14,9 @@
                     Receptai
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-{{--                    @foreach($categories as $category)
-
+                    @foreach($categories as $category)
                         <a class="dropdown-item" href="{{$category->slug}}">{{$category->name}}</a>
-
-                    --}}{{--
-                        <a class="dropdown-item" href="{{ route('home') }}">{{$category->name}}</a>
-                    --}}{{--
-                    @endforeach--}}
+                    @endforeach
                 </div>
             </li>
             <li class="nav-item">

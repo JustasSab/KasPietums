@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\{
     HomeController,
     AdminController,
@@ -33,4 +34,4 @@ Route::group(['middleware' => 'is_admin'], function() {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
-Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('showcategory');
+Route::get('/category', [CategoryController::class, 'index'])->name('layouts.top-navbar');
