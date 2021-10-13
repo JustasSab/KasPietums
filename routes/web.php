@@ -8,6 +8,7 @@ use App\Http\Controllers\{
     UserController,
     CategoryController,
     RecipeController,
+    FrontendController,
 };
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +30,10 @@ Auth::routes();
 Route::group(['middleware' => 'is_admin'], function() {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
     Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
-    Route::resource('/admin/recipes',RecipeController::class);
+    Route::resource('/admin/recipes', RecipeController::class);
+    Route::resource('/admin/categories', CategoryController::class);
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
-Route::get('/category', [CategoryController::class, 'index'])->name('layouts.top-navbar');
+Route::get('/category/{slug}', [FrontendController::class, 'viewcategory'])->name('categoryrecipes');
