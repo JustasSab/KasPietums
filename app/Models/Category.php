@@ -18,7 +18,7 @@ class Category extends Model
         'slug'
     ];
 
-    public function categories()
+    public function recipes()
     {
         return $this->belongsToMany(Recipe::class);
     }

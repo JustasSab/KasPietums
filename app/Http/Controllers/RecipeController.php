@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Recipe;
+use App\Models\Category;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -11,8 +12,19 @@ class RecipeController extends Controller
 {
     public function index()
     {
+        // if (request()->category) {
+        //     $recipes = Recipe::with('categories')->whereHas('categories', function($query){
+        //         $query->where('slug', request()->category);
+        //     })->get();
+        //     $recipes = Recipe::all();
+        // } else {
+        //     $categories = Category::all();
+        //     $recipes = Recipe::all();
+        // }
+
         //$recipes = Recipe::latest()->paginate(5);
         $recipes = Recipe::all();
+        
         return view('recipes.index',compact('recipes'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
