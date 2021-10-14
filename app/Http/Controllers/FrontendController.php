@@ -13,10 +13,10 @@ class FrontendController extends Controller
     {
         if(Category::where('slug', $slug))
         {
-            $category = Category::where('slug', $slug)->first();
-            $recipes = Recipe::where('id', $category->id)->get();
+            $cat = Category::where('slug', $slug)->first();
+            $rec = Recipe::where('id', $cat->id)->get();
 
-            return view('frontend.categoryRecipes', compact('category', 'recipes'));
+            return view('frontend.categoryRecipes', compact('cat', 'rec'));
         }
         else
         {

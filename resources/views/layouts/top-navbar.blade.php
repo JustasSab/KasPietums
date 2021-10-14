@@ -14,10 +14,8 @@
                     Receptai
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    @foreach($categories as $category)
-                        <a class="dropdown-item" href="{{ route('categoryrecipes', $category->slug) }}">{{$category->name}}</a>
-                        <!-- <a class="dropdown-item" href="{{ url('category/'.$category->slug) }}">{{$category->name}}</a> -->
-                        <!-- <a class="dropdown-item" href="{{$category->slug}}">{{$category->name}}</a> -->
+                    @foreach($categoriesNav as $categoryNav)
+                        <a class="dropdown-item" href="{{ route('categoryrecipes', $categoryNav->slug) }}">{{$categoryNav->name}}</a>
                     @endforeach
                 </div>
             </li>

@@ -4,7 +4,7 @@
     <span>Dashboard</span>
 </a>
 <a href="{{ route('recipes.index') }}" class="fa fa-book"> Receptai</a>
-<a href="#" class="fa fa-cutlery"> Ingredientai</a>
+<a href="{{ route('categories.index') }}" class="fa fa-cutlery"> Kategorijos</a>
 <a href="#" class="fa fa-user"> Vartotojai</a>
 <a href="#" class="fa fa-user"> Cards</a>
 <a href="#" class="fa fa-user"> Carousel</a>

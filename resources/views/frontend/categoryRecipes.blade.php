@@ -22,7 +22,7 @@
     <div class="container" id="main-container" style="margin-top:30px">
         <!-- Start Category Title -->
         <div class="category-title">
-            <a href="{{ route('categoryrecipes', $category->slug) }}">{{$category->name }}</a>
+            <a href="{{ route('categoryrecipes', $cat->slug) }}">{{$cat->name }}</a>
         </div>
         <!-- End Category Title -->
 
@@ -32,14 +32,14 @@
                 <!-- Start Category Card -->
                 <div class="card_item">
                     <div class="card_inner">
-                    <a href="{{ route('categoryrecipes', $category->slug) }}">
-                        @foreach ($recipes as $recipe)
+                    <a href="{{ route('categoryrecipes', $cat->slug) }}">
+                        @foreach ($rec as $r)
                         <div class="card_top">
-                            <img class="recipe-img" src="{{ asset('public/recipes/'.$recipe->image) }}" alt="">
+                            <img class="recipe-img" src="{{ asset('public/recipes/'.$r->image) }}" alt="">
                         </div>
                         <div class="card_bottom">
                             <div class="card_title">
-                            {{ $recipe->name }}
+                            {{ $r->name }}
                             </div>
                         </div>
                         @endforeach

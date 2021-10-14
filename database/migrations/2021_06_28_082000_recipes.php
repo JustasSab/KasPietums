@@ -17,7 +17,7 @@ class Recipes extends Migration
             $table->id();
 /*            $table->unsignedBigInteger('category_id');*/
             $table->string('name')->nullable();
-            $table->string('slug')->nullable();
+            $table->string('slug');
             $table->string('image')->nullable();//will contain url to image
             $table->text('ingredients')->nullable();
             $table->text('description')->nullable();
